@@ -33,3 +33,8 @@ jobs:
       - name: make
         run: make
         working-directory: ./perf-tool/build
+      - name: run agent
+        run: $JAVA_HOME/bin/java -agentpath:$PWD/libagent.so -version
+        working-directory: ./perf-tool/build
+
+
